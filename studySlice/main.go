@@ -54,7 +54,7 @@ func main() {
 	fmt.Println("SliceTest1 :", sliceTest1, len(sliceTest1), cap(sliceTest1))
 	fmt.Println("SliceTest2 :", sliceTest2, len(sliceTest2), cap(sliceTest2))
 
-	slice[1] = 100 //slicetest2 까지 값이 변경 .
+	sliceTest1[1] = 100 //slicetest2 까지 값이 변경 .
 
 	fmt.Println("After change second element ")
 	fmt.Println("SliceTest1 :", sliceTest1, len(sliceTest1), cap(sliceTest1))
