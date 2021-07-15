@@ -1,0 +1,57 @@
+package config
+
+
+type unixConfig struct {
+	//필요한 정보
+	Filename string //path + file name   path 파일이 저장될 경로....
+}
+type UnixConfigHandler interface {
+	GetConfigInteger(section, key string) (int, error)
+	GetConfigString(section, key string) (string, error)
+	GetConfigBoolean(section, key string) (bool, error)
+	LoadConfig() error//읽었으면  오류가있으면 error 처리
+}
+
+
+func NewConfig(filename string) UnixConfigHandler{
+	//객체를생성할떄 파일을 읽어야한다면 성공실패로해서 객체리턴해도되고 자유롭게 ,
+	return &unixConfig{Filename: filename}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func (u unixConfig) LoadConfig() error {
+	panic("implement me")
+	//여기는 지금까지 구현된 로직이들어가야함
+	//1 file check ,2 file read , 3 data parsing ,
+}
+func (u unixConfig) GetConfigInteger(section, key string) (int, error) {
+	panic("implement me")
+}
+func (u unixConfig) GetConfigString(section, key string) (string, error) {
+	panic("implement me")
+}
+
+func (u unixConfig) GetConfigBoolean(section, key string) (bool, error) {
+	panic("implement me")
+}
+
